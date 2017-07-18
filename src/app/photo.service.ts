@@ -10,7 +10,6 @@ export class PhotoService {
 
   constructor(private af: AngularFireDatabase) {
     this.photos = af.list('photos');
-    console.log(this.photos);
   }
   addPhoto(newPhoto: Photo) {
     this.photos.push(newPhoto);

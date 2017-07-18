@@ -9,6 +9,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { UserPhotosListComponent } from './user-photos-list/user-photos-list.component';
+import { APODComponent } from './apod/apod.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -23,7 +24,8 @@ export const firebaseConfig = {
     AppComponent,
     RoverFormComponent,
     PhotosListComponent,
-    UserPhotosListComponent
+    UserPhotosListComponent,
+    APODComponent
   ],
   imports: [
     HttpModule,

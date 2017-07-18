@@ -1,0 +1,20 @@
+<form>
+  <div class="form-group">
+    <label for="date">Date</label>
+    <input type=date #apodDate>
+  </div>
+  <div class="form-group">
+    <label for="hd">Quality</label>
+    <select #apodQuality>
+      <option value="false">Normal</option>
+      <option  value="true">High Resolution ~Will take longer to load~</option>
+    </select>
+  </div>
+  <button (click)="getAPODImages(apodDate.value, apodQuality.value);false">See the Image for that day!</button>
+</form>
+
+<div *ngIf="photos">
+  <img [src]=photos.url />
+  <h4>{{photos.title}}</h4>
+  <p>{{photos.explanation}}</p>
+</div>
